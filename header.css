@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -118,8 +114,82 @@ body {
   color: #c55b3e;
 }
 
+.menu-container {
+  background: url(../src/images/food-wide-2-big.jpg) no-repeat center center;
+  padding-top: 96px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(56, 65, 67, 0.8);
+  width: 100%;
+  max-width: 720px;
+
+}
+
+.menu-title {
+  color: #fafcea;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 128px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Metrophobic", sans-serif;
+  font-size: 50px;
+}
+
+.menu-logo {
+  font-family: "Pinyon Script", cursive;
+}
+
+.menu-item {
+  font-family: "Metrophobic", sans-serif;
+  padding: 25px;
+  margin: 25px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.menu-item-title {
+  color: #c55b3e;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 24px;
+}
+
+.menul {
+  color: #c55b3e;
+}
+
+.menu-dish {
+  color: #fafcea;
+  font-size: 1.3em;
+  line-height: 1.9em;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.contact-container {
+  background: rgba(56, 65, 67, 1);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-title {
+  color: #fafcea;
+}
+
 @media only screen and (min-width: 800px) {
   .page-container {
-    background: url(../src/images/food-wide-1-big.jpg) no-repeat center center fixed;
+    background: url(../src/images/food-wide-1-big.jpg) no-repeat center center;
   }
 }
