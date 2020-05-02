@@ -1,4 +1,14 @@
 import "../css/main.css"
+import createHomepage from "./home.js";
+import createMenupage from "./menu.js";
+import createContactpage from "./contact.js";
+import foodBG1 from "../images/food-wide-1-comp.jpg";
+import foodBG1B from "../images/food-wide-1-big-comp.jpg";
+import foodBG2 from "../images/food-wide-2-comp.jpg";
+import foodBG2B from "../images/food-wide-2-big-comp.jpg";
+import foodBG3 from "../images/food-wide-3-comp.jpg";
+import foodBG3B from "../images/food-wide-3-big-comp.jpg";
+
 
 function createHeader () {
   let containerDiv = document.createElement("div");
@@ -16,12 +26,33 @@ function createHeader () {
   let homeButton = document.createElement("button");
   homeButton.classList.add("tab-selector", "active", "colorletter");
   homeButton.innerText = "Home";
+  homeButton.tabIndex = 1;
+  homeButton.addEventListener ("click", () => {
+    changePage("home", currentPage);
+    menuButton.classList.remove("active");
+    contactButton.classList.remove("active");
+    homeButton.classList.add("active");
+  });
   let menuButton = document.createElement("button");
   menuButton.classList.add("tab-selector", "colorletter");
   menuButton.innerText = "Menu";
+  menuButton.tabIndex = 2;
+  menuButton.addEventListener ("click", () => {
+    changePage("menu", currentPage);
+    contactButton.classList.remove("active");
+    homeButton.classList.remove("active");
+    menuButton.classList.add("active");
+  });
   let contactButton = document.createElement("button");
   contactButton.classList.add("tab-selector", "colorletter");
   contactButton.innerText = "Contact";
+  contactButton.tabIndex = 3;
+  contactButton.addEventListener ("click", () => {
+    changePage("contact", currentPage);
+    homeButton.classList.remove("active");
+    menuButton.classList.remove("active");
+    contactButton.classList.add("active");
+  });
 
 
 
@@ -38,13 +69,18 @@ function createHeader () {
 
 function createFooter () {
   let footerContainer = document.createElement("div");
-  let footer = document.createELement("footer");
+  footerContainer.classList.add("footer-container");
+  let footer = document.createElement("footer");
+  footer.classList.add("footer");
   let authorsContainer = document.createElement("div");
+  authorsContainer.classList.add("authors");
   let author = document.createElement("div");
+  author.classList.add("author");
+  author.innerText = "Made in 2020 by ";
   let authorLink = document.createElement("a");
   authorLink.href = "https://etiontdn.github.io";
   authorLink.target = "_blank";
-  author.innerText = "Made in 2020 by ";
+  authorLink.innerText = "Etiontdn";
   author.appendChild(authorLink);
   authorsContainer.appendChild(author);
   footer.appendChild(authorsContainer);
@@ -52,5 +88,39 @@ function createFooter () {
   document.querySelector(".container").appendChild(footerContainer);
 }
 
-createHeader();
-createFooter();
+function deleteCurrent () {
+  document.querySelector(".container").childNodes[1].remove();
+}
+
+function changePage (to, from) {
+  if (to != from) {
+    if (to === "home") {
+      currentPage = to;
+      deleteCurrent();
+      createHomepage();
+    } else if (to === "menu") {
+      currentPage = to;
+      deleteCurrent();
+      createMenupage();
+    } else if (to === "contact") {
+      currentPage = to;
+      deleteCurrent();
+      createContactpage();
+    }
+  }
+}
+
+let currentPage;
+
+function startPage () {
+  createHeader();
+  createFooter();
+  currentPage = "home";
+  createHomepage();
+}
+
+
+
+window.addEventListener("load", (e) => {
+  startPage();
+});

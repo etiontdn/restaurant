@@ -85,7 +85,8 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(../images/food-wide-1.jpg) no-repeat center center;
+  background: url(../images/food-wide-1-comp.jpg) no-repeat center center;
+
 }
 
 
@@ -116,7 +117,7 @@
 }
 
 .menu-container {
-  background: url(../images/food-wide-2.jpg) no-repeat center center;
+  background: url(../images/food-wide-2-comp.jpg) no-repeat center center;
   padding-top: 96px;
   display: flex;
   justify-content: center;
@@ -126,7 +127,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(56, 65, 67, 0.8);
+  background: rgba(56, 65, 67, 0.6);
   width: 100%;
   max-width: 720px;
 
@@ -189,7 +190,7 @@
 
 .contact-container {
   padding-top: 96px;
-  background: url(../images/food-wide-3.jpg) no-repeat center center;
+  background: url(../images/food-wide-3-comp.jpg) no-repeat center center;
   height: 100%;
   min-height: 100vh;
   display: flex;
@@ -250,7 +251,6 @@
   line-height: 1.8em;
 }
 
-
 .author a {
   color: #c55b3e;
   text-decoration: none;
@@ -261,15 +261,21 @@
   text-decoration: underline;
 }
 
+body {
+  background-color: #384143;
+}
+
+
 @media only screen and (min-width: 800px) {
   .page-container {
-    background: url(../images/food-wide-1-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-1-big-comp.jpg) no-repeat center center;
   }
   .menu-container {
-    background: url(../images/food-wide-2-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-2-big-comp.jpg) no-repeat center center;
+    padding-bottom: 96px;
   }
   .contact-container {
-    background: url(../images/food-wide-3-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-3-big-comp.jpg) no-repeat center center;
   }
 
   .author, .photo-author {
