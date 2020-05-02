@@ -53,6 +53,7 @@
 .tab-selector {
   color: #fafcea;
   flex:1;
+  margin-left: 8px;
   border: none;
   background: none;
 
@@ -115,7 +116,7 @@
 }
 
 .menu-container {
-  background: url(../src/images/food-wide-2-big.jpg) no-repeat center center;
+  background: url(../src/images/food-wide-2.jpg) no-repeat center center;
   padding-top: 96px;
   display: flex;
   justify-content: center;
@@ -175,21 +176,108 @@
 
 }
 
+.menu {
+  cursor: default;
+}
+
+.menu-title, .menu-item-title, .dish-name, .dish-price {
+  transition: color 150ms ease-out;
+}
+.menu-title:hover, .dish-name:hover, .dish-price:hover {
+  color: #c55b3e;
+}
+
 .contact-container {
-  background: rgba(56, 65, 67, 1);
+  padding-top: 96px;
+  background: url(../src/images/food-wide-3.jpg) no-repeat center center;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact {
+  background: rgba(56, 65, 67, 0.8);
+  padding-top: 55px;
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contact-title {
+  color: #c55b3e;
+}
+
+.contact-types {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.8em;
+}
+
+.location, .phone, .business-hours {
+  color: #fafcea;
+  padding: 50px;
+  transition: color 150ms ease-out;
+}
+
+.location:hover, .phone:hover, .business-hours:hover, .contact-title:hover {
+  color: #c55b3e;
+}
+
+
+.footer-container {
+  width: 100%;
+  background: rgba(56, 65, 67, 1);
+  color: #fafcea;
+  font-family: "Metrophobic", sans-serif;]
+}
+
+.footer {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.contact-title {
-  color: #fafcea;
+.authors{
+  width: 90%;
+  line-height: 1.8em;
+}
+
+
+.author a {
+  color: #c55b3e;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.author a:hover, .author a:active {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 800px) {
   .page-container {
     background: url(../src/images/food-wide-1-big.jpg) no-repeat center center;
+  }
+  .menu-container {
+    background: url(../src/images/food-wide-2-big.jpg) no-repeat center center;
+  }
+  .contact-container {
+    background: url(../src/images/food-wide-3-big.jpg) no-repeat center center;
+  }
+
+  .author, .photo-author {
+    flex: 1;
+    display: flex;
+  }
+  .authors {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
