@@ -85,7 +85,7 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(../src/images/food-wide-1.jpg) no-repeat center center;
+  background: url(../images/food-wide-1.jpg) no-repeat center center;
 }
 
 
@@ -116,7 +116,7 @@
 }
 
 .menu-container {
-  background: url(../src/images/food-wide-2.jpg) no-repeat center center;
+  background: url(../images/food-wide-2.jpg) no-repeat center center;
   padding-top: 96px;
   display: flex;
   justify-content: center;
@@ -189,7 +189,7 @@
 
 .contact-container {
   padding-top: 96px;
-  background: url(../src/images/food-wide-3.jpg) no-repeat center center;
+  background: url(../images/food-wide-3.jpg) no-repeat center center;
   height: 100%;
   min-height: 100vh;
   display: flex;
@@ -236,7 +236,7 @@
   width: 100%;
   background: rgba(56, 65, 67, 1);
   color: #fafcea;
-  font-family: "Metrophobic", sans-serif;]
+  font-family: "Metrophobic", sans-serif;
 }
 
 .footer {
@@ -263,13 +263,13 @@
 
 @media only screen and (min-width: 800px) {
   .page-container {
-    background: url(../src/images/food-wide-1-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-1-big.jpg) no-repeat center center;
   }
   .menu-container {
-    background: url(../src/images/food-wide-2-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-2-big.jpg) no-repeat center center;
   }
   .contact-container {
-    background: url(../src/images/food-wide-3-big.jpg) no-repeat center center;
+    background: url(../images/food-wide-3-big.jpg) no-repeat center center;
   }
 
   .author, .photo-author {
