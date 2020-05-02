@@ -9,6 +9,21 @@ import foodBG2B from "../images/food-wide-2-big-comp.jpg";
 import foodBG3 from "../images/food-wide-3-comp.jpg";
 import foodBG3B from "../images/food-wide-3-big-comp.jpg";
 
+let foodbg1 = new Image();
+if (window.matchMedia('(max-width: 800px)').matches) {
+  foodbg1.src = foodBG1;
+} else foodbg1.src = foodBG1B;
+
+let foodbg2 = new Image();
+if (window.matchMedia('(max-width: 800px)').matches) {
+  foodbg2.src = foodBG2;
+} else foodbg2.src = foodBG2B;
+
+let foodbg3 = new Image();
+if (window.matchMedia('(max-width: 800px)').matches) {
+  foodbg3.src = foodBG3;
+} else foodbg3.src = foodBG3B;
+
 
 function createHeader () {
   let containerDiv = document.createElement("div");
@@ -97,15 +112,15 @@ function changePage (to, from) {
     if (to === "home") {
       currentPage = to;
       deleteCurrent();
-      createHomepage(foodBG1, foodBG1B);
+      createHomepage(foodbg1);
     } else if (to === "menu") {
       currentPage = to;
       deleteCurrent();
-      createMenupage(foodBG2, foodBG2B);
+      createMenupage(foodbg2);
     } else if (to === "contact") {
       currentPage = to;
       deleteCurrent();
-      createContactpage(foodBG3, foodBG3B);
+      createContactpage(foodbg3);
     }
   }
 }
@@ -116,7 +131,7 @@ function startPage () {
   createHeader();
   createFooter();
   currentPage = "home";
-  createHomepage(foodBG1, foodBG1B);
+  createHomepage(foodbg1);
 }
 
 

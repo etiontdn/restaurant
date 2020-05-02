@@ -1,8 +1,8 @@
 
-function createContactpage (bg1, bg2) {
+function createContactpage (bg) {
   let contactContainer = document.createElement("div");
   contactContainer.classList.add("contact-container");
-  contactContainer.style.background = "url("+bg1+")" +
+  contactContainer.style.background = "url("+bg.src+")" +
       " no-repeat center center";
   let contact = document.createElement("div");
   contact.classList.add("contact");
