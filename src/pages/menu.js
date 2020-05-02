@@ -20,9 +20,11 @@ const menuDishesList = {
 };
 
 
-function createMenupage () {
+function createMenupage (bg1, bg2) {
   let menuContainer = document.createElement("div");
   menuContainer.classList.add("menu-container");
+  menuContainer.style.background = "url("+bg1+")" +
+      " no-repeat center center";
   let menu = document.createElement("div");
   menu.classList.add("menu");
   let menuTitle = document.createElement("h2");

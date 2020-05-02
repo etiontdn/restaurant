@@ -97,15 +97,15 @@ function changePage (to, from) {
     if (to === "home") {
       currentPage = to;
       deleteCurrent();
-      createHomepage();
+      createHomepage(foodBG1, foodBG1B);
     } else if (to === "menu") {
       currentPage = to;
       deleteCurrent();
-      createMenupage();
+      createMenupage(foodBG2, foodBG2B);
     } else if (to === "contact") {
       currentPage = to;
       deleteCurrent();
-      createContactpage();
+      createContactpage(foodBG3, foodBG3B);
     }
   }
 }
@@ -116,7 +116,7 @@ function startPage () {
   createHeader();
   createFooter();
   currentPage = "home";
-  createHomepage();
+  createHomepage(foodBG1, foodBG1B);
 }
 
 

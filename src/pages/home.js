@@ -1,10 +1,12 @@
 
 
-function createHomepage () {
+function createHomepage (bg1, bg2) {
   let mainPage = document.createElement("div");
   mainPage.classList.add("main-page");
   let pageContainer = document.createElement("div")
   pageContainer.classList.add("page-container");
+  pageContainer.style.background = "url("+bg1+")" +
+      " no-repeat center center";
   let welcome = document.createElement("div");
   welcome.classList.add("welcome");
   let welcomeText = document.createElement("div");
